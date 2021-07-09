@@ -12,7 +12,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.Annotation;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationElement;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
-import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
+import net.fabricmc.tinyremapper.extension.mixin.common.Logger;
 
 /**
  * Remaps the soft-target of {@code @Mixin}, it contains 2 passes. The first pass read

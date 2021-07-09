@@ -12,7 +12,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.AnnotationVisitorCommonUtil;
-import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
+import net.fabricmc.tinyremapper.extension.mixin.common.Logger;
 
 /**
  * Depends on {@code value = ""} or not, remap the soft-target of {@code @Invoker}

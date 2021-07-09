@@ -11,7 +11,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.AnnotationVisitorCommonUtil;
-import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
+import net.fabricmc.tinyremapper.extension.mixin.common.Logger;
 
 /**
  * Emits the mapping of hard-target of {@code @Overwrite}, it reads {@code remap},

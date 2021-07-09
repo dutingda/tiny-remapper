@@ -14,7 +14,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.AnnotationVisitorCommonUtil;
 import net.fabricmc.tinyremapper.extension.mixin.data.IMappingHolder;
-import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
+import net.fabricmc.tinyremapper.extension.mixin.common.Logger;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface.Remap;
 

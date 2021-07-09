@@ -5,6 +5,7 @@ import java.util.List;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.commons.Remapper;
 
+import net.fabricmc.tinyremapper.api.Classpath;
 import net.fabricmc.tinyremapper.extension.mixin.data.Annotation;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
@@ -18,10 +19,12 @@ import net.fabricmc.tinyremapper.extension.mixin.annotation.ShadowAnnotationVisi
 public class MethodAnnotationVisitorFactory {
 	private final AnnotationVisitorCommonDataHolder data;
 
-	public MethodAnnotationVisitorFactory(Remapper remapper, AnnotationVisitor av, IMappingHolder mapping,
-										String className, String memberName, String memberDescriptor) {
-		this.data = new AnnotationVisitorCommonDataHolder(remapper, av, mapping,
-				AnnotationType.METHOD, className, memberName, memberDescriptor);
+	public MethodAnnotationVisitorFactory(Remapper remapper, Classpath classpath,
+			AnnotationVisitor delegate, IMappingHolder mapping,
+			String className, String memberName, String memberDescriptor) {
+		this.data = new AnnotationVisitorCommonDataHolder(
+				remapper, classpath, delegate, mapping, AnnotationType.METHOD,
+				className, memberName, memberDescriptor);
 	}
 
 	public AnnotationVisitor shadow(boolean remapIn, List<String> targetsIn) {
