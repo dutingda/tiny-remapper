@@ -6,9 +6,9 @@ import java.util.Objects;
 import org.objectweb.asm.AnnotationVisitor;
 
 import net.fabricmc.tinyremapper.extension.mixin.data.Constant;
-import net.fabricmc.tinyremapper.extension.mixin.data.Constant.Annotation;
-import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationElement;
-import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.data.Annotation;
+import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationElement;
+import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
 import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;

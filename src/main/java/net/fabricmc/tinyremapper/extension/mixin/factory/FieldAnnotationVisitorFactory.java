@@ -5,7 +5,7 @@ import java.util.List;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
 import net.fabricmc.tinyremapper.extension.mixin.data.IMappingHolder;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ShadowAnnotationVisitor;

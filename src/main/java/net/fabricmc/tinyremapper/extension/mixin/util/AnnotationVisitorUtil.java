@@ -5,7 +5,7 @@ import java.util.Locale;
 
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.data.IMappingHolder;
 
 public class AnnotationVisitorUtil {

@@ -5,8 +5,6 @@ import java.util.Objects;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationType;
-
 public class AnnotationVisitorCommonDataHolder {
 	public final Remapper remapper;
 	public final AnnotationVisitor delegate;
