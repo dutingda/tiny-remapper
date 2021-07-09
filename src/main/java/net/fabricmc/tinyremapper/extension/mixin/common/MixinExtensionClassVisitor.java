@@ -36,7 +36,7 @@ public class MixinExtensionClassVisitor extends ClassVisitor {
 	private final List<Interface> interfaces = new ArrayList<>();
 
 	public MixinExtensionClassVisitor(ClassVisitor delegate, Remapper remapper,
-									  IMappingHolder mapping, Classpath classpath) {
+									IMappingHolder mapping, Classpath classpath) {
 		super(Constant.ASM_VERSION, delegate);
 		this.remapper = Objects.requireNonNull(remapper);
 		this.classpath = Objects.requireNonNull(classpath);

@@ -26,8 +26,8 @@ public class AnnotationVisitorCommonUtil {
 	}
 
 	public static void emitMapping(Remapper remapper, AnnotationType type,
-								   IMappingHolder mapping, String owner,
-								   String srcName, String srcDesc, String dstName) {
+								IMappingHolder mapping, String owner,
+								String srcName, String srcDesc, String dstName) {
 		if (srcName.equals(dstName)) {
 			throw new RuntimeException("srcName and dstName are the same, " + srcName);
 		} else {
