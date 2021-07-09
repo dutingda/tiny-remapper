@@ -1,4 +1,4 @@
-package net.fabricmc.tinyremapper.extension.mixin.annotation.factory;
+package net.fabricmc.tinyremapper.extension.mixin.factory;
 
 import java.util.List;
 

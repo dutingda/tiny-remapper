@@ -17,9 +17,9 @@ import net.fabricmc.tinyremapper.extension.mixin.data.SimpleMappingHolder;
 import net.fabricmc.tinyremapper.extension.mixin.data.Constant.Annotation;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface;
-import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.ClassAnnotationVisitorFactory;
-import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.FieldAnnotationVisitorFactory;
-import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.MethodAnnotationVisitorFactory;
+import net.fabricmc.tinyremapper.extension.mixin.factory.ClassAnnotationVisitorFactory;
+import net.fabricmc.tinyremapper.extension.mixin.factory.FieldAnnotationVisitorFactory;
+import net.fabricmc.tinyremapper.extension.mixin.factory.MethodAnnotationVisitorFactory;
 
 public class MixinAnnotationProcessor {
 	private final IMappingHolder mapping = new SimpleMappingHolder();
