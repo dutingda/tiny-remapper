@@ -1,18 +1,18 @@
-package net.fabricmc.tinyremapper.mixin.annotation.factory;
+package net.fabricmc.tinyremapper.extension.mixin.annotation.factory;
 
 import java.util.List;
 
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.mixin.Constant.Annotation;
-import net.fabricmc.tinyremapper.mixin.Constant.AnnotationType;
-import net.fabricmc.tinyremapper.mixin.annotation.AccessorAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.annotation.InjectAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.annotation.InvokerAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.annotation.OverwriteAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.annotation.ShadowAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.util.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.Annotation;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.util.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.AccessorAnnotationVisitor;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.InjectAnnotationVisitor;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.InvokerAnnotationVisitor;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.OverwriteAnnotationVisitor;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.ShadowAnnotationVisitor;
 
 public class MethodAnnotationVisitorFactory {
 	private final DataHolder data;

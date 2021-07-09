@@ -1,4 +1,4 @@
-package net.fabricmc.tinyremapper.mixin;
+package net.fabricmc.tinyremapper.extension.mixin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +11,14 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.commons.Remapper;
 
 import net.fabricmc.tinyremapper.IMappingProvider;
-import net.fabricmc.tinyremapper.mixin.Constant.Annotation;
-import net.fabricmc.tinyremapper.mixin.annotation.ImplementsAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.annotation.ImplementsAnnotationVisitor.Interface;
-import net.fabricmc.tinyremapper.mixin.annotation.factory.ClassAnnotationVisitorFactory;
-import net.fabricmc.tinyremapper.mixin.annotation.factory.FieldAnnotationVisitorFactory;
-import net.fabricmc.tinyremapper.mixin.annotation.factory.MethodAnnotationVisitorFactory;
-import net.fabricmc.tinyremapper.mixin.util.IMappingHolder;
-import net.fabricmc.tinyremapper.mixin.util.SimpleMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.util.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.util.SimpleMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.Annotation;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.ClassAnnotationVisitorFactory;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.FieldAnnotationVisitorFactory;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.MethodAnnotationVisitorFactory;
 
 public class MixinAnnotationProcessor {
 	private final IMappingHolder mapping = new SimpleMappingHolder();

@@ -1,13 +1,13 @@
-package net.fabricmc.tinyremapper.mixin.annotation.factory;
+package net.fabricmc.tinyremapper.extension.mixin.annotation.factory;
 
 import java.util.List;
 
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.mixin.Constant.AnnotationType;
-import net.fabricmc.tinyremapper.mixin.annotation.ShadowAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.util.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.util.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.ShadowAnnotationVisitor;
 
 public class FieldAnnotationVisitorFactory {
 	private final DataHolder data;

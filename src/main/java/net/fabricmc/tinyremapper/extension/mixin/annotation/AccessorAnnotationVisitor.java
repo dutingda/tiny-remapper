@@ -1,4 +1,4 @@
-package net.fabricmc.tinyremapper.mixin.annotation;
+package net.fabricmc.tinyremapper.extension.mixin.annotation;
 
 import java.util.List;
 import java.util.Objects;
@@ -7,14 +7,14 @@ import java.util.regex.Pattern;
 
 import org.objectweb.asm.AnnotationVisitor;
 
-import net.fabricmc.tinyremapper.mixin.Constant;
-import net.fabricmc.tinyremapper.mixin.Constant.Annotation;
-import net.fabricmc.tinyremapper.mixin.Constant.AnnotationElement;
-import net.fabricmc.tinyremapper.mixin.Constant.AnnotationType;
-import net.fabricmc.tinyremapper.mixin.annotation.common.BoolRemapAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.annotation.factory.DataHolder;
-import net.fabricmc.tinyremapper.mixin.util.AnnotationVisitorUtil;
-import net.fabricmc.tinyremapper.mixin.util.Logger;
+import net.fabricmc.tinyremapper.extension.mixin.Constant;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.Annotation;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationElement;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.DataHolder;
+import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;
+import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 
 /**
  * Depends on {@code value = ""} or not, remap the soft-target of {@code @Accessor}

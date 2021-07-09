@@ -1,4 +1,4 @@
-package net.fabricmc.tinyremapper.mixin.annotation.factory;
+package net.fabricmc.tinyremapper.extension.mixin.annotation.factory;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -6,11 +6,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.mixin.Constant.AnnotationType;
-import net.fabricmc.tinyremapper.mixin.annotation.ImplementsAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.annotation.ImplementsAnnotationVisitor.Interface;
-import net.fabricmc.tinyremapper.mixin.annotation.MixinAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.util.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.util.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.MixinAnnotationVisitor;
 
 public class ClassAnnotationVisitorFactory {
 	private final DataHolder data;

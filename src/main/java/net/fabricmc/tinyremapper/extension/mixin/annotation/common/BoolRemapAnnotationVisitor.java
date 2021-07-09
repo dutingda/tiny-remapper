@@ -1,12 +1,12 @@
-package net.fabricmc.tinyremapper.mixin.annotation.common;
+package net.fabricmc.tinyremapper.extension.mixin.annotation.common;
 
 import java.util.Objects;
 
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.tree.AnnotationNode;
 
-import net.fabricmc.tinyremapper.mixin.Constant;
-import net.fabricmc.tinyremapper.mixin.Constant.AnnotationElement;
+import net.fabricmc.tinyremapper.extension.mixin.Constant;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationElement;
 
 /**
  * Common super class for any annotation require to read {@code remap} in

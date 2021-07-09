@@ -1,4 +1,4 @@
-package net.fabricmc.tinyremapper.mixin.util;
+package net.fabricmc.tinyremapper.extension.mixin.util;
 
 import java.util.HashMap;
 import java.util.Map;

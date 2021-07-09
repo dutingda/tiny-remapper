@@ -1,12 +1,12 @@
-package net.fabricmc.tinyremapper.mixin.annotation;
+package net.fabricmc.tinyremapper.extension.mixin.annotation;
 
 import java.util.List;
 
 import org.objectweb.asm.AnnotationVisitor;
 
-import net.fabricmc.tinyremapper.mixin.Constant;
-import net.fabricmc.tinyremapper.mixin.annotation.common.BoolRemapAnnotationVisitor;
-import net.fabricmc.tinyremapper.mixin.annotation.factory.DataHolder;
+import net.fabricmc.tinyremapper.extension.mixin.Constant;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.DataHolder;
 
 public class InjectAnnotationVisitor extends BoolRemapAnnotationVisitor {
 	public InjectAnnotationVisitor(String annotationDesc, DataHolder data, boolean remap, List<String> targets) {

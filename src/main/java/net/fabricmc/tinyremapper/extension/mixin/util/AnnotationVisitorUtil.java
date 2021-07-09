@@ -1,11 +1,11 @@
-package net.fabricmc.tinyremapper.mixin.util;
+package net.fabricmc.tinyremapper.extension.mixin.util;
 
 import java.util.List;
 import java.util.Locale;
 
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.mixin.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationType;
 
 public class AnnotationVisitorUtil {
 	public static String removeCamelPrefix(String prefix, String str) {
