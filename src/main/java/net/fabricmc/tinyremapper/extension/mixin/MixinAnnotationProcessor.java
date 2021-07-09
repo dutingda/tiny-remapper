@@ -11,9 +11,10 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.commons.Remapper;
 
 import net.fabricmc.tinyremapper.IMappingProvider;
-import net.fabricmc.tinyremapper.extension.mixin.util.IMappingHolder;
-import net.fabricmc.tinyremapper.extension.mixin.util.SimpleMappingHolder;
-import net.fabricmc.tinyremapper.extension.mixin.Constant.Annotation;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant;
+import net.fabricmc.tinyremapper.extension.mixin.data.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.data.SimpleMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.Annotation;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.ClassAnnotationVisitorFactory;

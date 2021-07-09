@@ -5,11 +5,11 @@ import java.util.Objects;
 
 import org.objectweb.asm.AnnotationVisitor;
 
-import net.fabricmc.tinyremapper.extension.mixin.Constant;
-import net.fabricmc.tinyremapper.extension.mixin.Constant.Annotation;
-import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.Annotation;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
-import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.DataHolder;
+import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
 import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;
 import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 
@@ -19,10 +19,10 @@ import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
  * emitted mapping is used by another tiny-remapper to remap the hard-target.
  */
 public class OverwriteAnnotationVisitor extends BoolRemapAnnotationVisitor {
-	private final DataHolder data;
+	private final AnnotationVisitorCommonDataHolder data;
 	private final List<String> targets;
 
-	public OverwriteAnnotationVisitor(DataHolder data, boolean remap, List<String> targets) {
+	public OverwriteAnnotationVisitor(AnnotationVisitorCommonDataHolder data, boolean remap, List<String> targets) {
 		super(Annotation.OVERWRITE.get(), remap, data.delegate);
 		this.data = Objects.requireNonNull(data);
 		this.targets = Objects.requireNonNull(targets);

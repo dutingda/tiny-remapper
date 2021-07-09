@@ -1,4 +1,4 @@
-package net.fabricmc.tinyremapper.extension.mixin;
+package net.fabricmc.tinyremapper.extension.mixin.data;
 
 import org.objectweb.asm.Opcodes;
 

@@ -1,4 +1,4 @@
-package net.fabricmc.tinyremapper.extension.mixin.util;
+package net.fabricmc.tinyremapper.extension.mixin.data;
 
 import net.fabricmc.tinyremapper.IMappingProvider;
 

@@ -7,11 +7,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Type;
 
-import net.fabricmc.tinyremapper.extension.mixin.Constant;
-import net.fabricmc.tinyremapper.extension.mixin.Constant.Annotation;
-import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationElement;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.Annotation;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationElement;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
-import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.DataHolder;
+import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
 import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 
 /**
@@ -20,11 +20,11 @@ import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
  * Notice that {@code value} is not remapped as it will be handled by tiny-remapper.
  */
 public class MixinAnnotationVisitor extends BoolRemapAnnotationVisitor {
-	private final DataHolder data;
+	private final AnnotationVisitorCommonDataHolder data;
 	private final AtomicBoolean remap;
 	private final List<String> targets;
 
-	public MixinAnnotationVisitor(DataHolder data, AtomicBoolean remapOut, List<String> targetsOut) {
+	public MixinAnnotationVisitor(AnnotationVisitorCommonDataHolder data, AtomicBoolean remapOut, List<String> targetsOut) {
 		super(Annotation.MIXIN.get(), true, data.delegate);
 		this.data = Objects.requireNonNull(data);
 		this.remap = Objects.requireNonNull(remapOut);

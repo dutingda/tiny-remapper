@@ -8,12 +8,12 @@ import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.extension.mixin.Constant;
-import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationElement;
-import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationType;
-import net.fabricmc.tinyremapper.extension.mixin.annotation.factory.DataHolder;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationElement;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
 import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;
-import net.fabricmc.tinyremapper.extension.mixin.util.IMappingHolder;
+import net.fabricmc.tinyremapper.extension.mixin.data.IMappingHolder;
 import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface.Remap;
@@ -64,7 +64,7 @@ public class ImplementsAnnotationVisitor extends AnnotationVisitor {
 
 	private final List<Interface> interfaces;
 
-	public ImplementsAnnotationVisitor(DataHolder data, List<Interface> interfacesOut) {
+	public ImplementsAnnotationVisitor(AnnotationVisitorCommonDataHolder data, List<Interface> interfacesOut) {
 		super(Constant.ASM_VERSION, data.delegate);
 		this.interfaces = Objects.requireNonNull(interfacesOut);
 	}

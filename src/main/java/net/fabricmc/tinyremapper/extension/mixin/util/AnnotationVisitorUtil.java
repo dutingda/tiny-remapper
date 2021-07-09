@@ -5,7 +5,8 @@ import java.util.Locale;
 
 import org.objectweb.asm.commons.Remapper;
 
-import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationType;
+import net.fabricmc.tinyremapper.extension.mixin.data.IMappingHolder;
 
 public class AnnotationVisitorUtil {
 	public static String removeCamelPrefix(String prefix, String str) {
@@ -25,8 +26,8 @@ public class AnnotationVisitorUtil {
 	}
 
 	public static void emitMapping(Remapper remapper, AnnotationType type,
-								IMappingHolder mapping, String owner,
-								String srcName, String srcDesc, String dstName) {
+								   IMappingHolder mapping, String owner,
+								   String srcName, String srcDesc, String dstName) {
 		if (srcName.equals(dstName)) {
 			throw new RuntimeException("srcName and dstName are the same, " + srcName);
 		} else {

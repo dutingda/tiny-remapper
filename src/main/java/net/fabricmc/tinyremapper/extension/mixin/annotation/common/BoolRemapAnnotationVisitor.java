@@ -5,8 +5,8 @@ import java.util.Objects;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.tree.AnnotationNode;
 
-import net.fabricmc.tinyremapper.extension.mixin.Constant;
-import net.fabricmc.tinyremapper.extension.mixin.Constant.AnnotationElement;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant;
+import net.fabricmc.tinyremapper.extension.mixin.data.Constant.AnnotationElement;
 
 /**
  * Common super class for any annotation require to read {@code remap} in
