@@ -1,4 +1,4 @@
-package net.fabricmc.tinyremapper.extension.mixin.util;
+package net.fabricmc.tinyremapper.extension.mixin.annotation.common;
 
 import java.util.List;
 import java.util.Locale;
@@ -8,7 +8,7 @@ import org.objectweb.asm.commons.Remapper;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.data.IMappingHolder;
 
-public class AnnotationVisitorUtil {
+public class AnnotationVisitorCommonUtil {
 	public static String removeCamelPrefix(String prefix, String str) {
 		if (str.startsWith(prefix)) {
 			str = str.substring(prefix.length());

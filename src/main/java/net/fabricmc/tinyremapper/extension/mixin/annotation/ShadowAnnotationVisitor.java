@@ -10,7 +10,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.Annotation;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationElement;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
-import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.common.AnnotationVisitorCommonUtil;
 import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 
 /**
@@ -54,7 +54,7 @@ public class ShadowAnnotationVisitor extends BoolRemapAnnotationVisitor {
 							? data.memberName.substring(prefix.length()) : data.memberName;
 					String srcDesc = data.memberDescriptor;
 
-					String dstName = AnnotationVisitorUtil.remapMember(
+					String dstName = AnnotationVisitorCommonUtil.remapMember(
 							data.remapper, data.type, ShadowAnnotationVisitor.this.targets,
 							srcName, srcDesc);
 
@@ -63,7 +63,7 @@ public class ShadowAnnotationVisitor extends BoolRemapAnnotationVisitor {
 					} else {
 						srcName = data.memberName;
 						dstName = prefix + dstName;
-						AnnotationVisitorUtil.emitMapping(
+						AnnotationVisitorCommonUtil.emitMapping(
 								data.remapper, data.type, data.mapping,
 								data.className, srcName, srcDesc, dstName);
 					}

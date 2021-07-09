@@ -10,7 +10,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.Annotation;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
-import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.common.AnnotationVisitorCommonUtil;
 import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 
 /**
@@ -38,14 +38,14 @@ public class OverwriteAnnotationVisitor extends BoolRemapAnnotationVisitor {
 					String srcName = data.memberName;
 					String srcDesc = data.memberDescriptor;
 
-					String dstName = AnnotationVisitorUtil.remapMember(
+					String dstName = AnnotationVisitorCommonUtil.remapMember(
 							data.remapper, AnnotationType.METHOD,
 							OverwriteAnnotationVisitor.this.targets, srcName, srcDesc);
 
 					if (srcName.equals(dstName)) {
 						Logger.warn("@Overwrite", OverwriteAnnotationVisitor.this.targets, data.className, data.memberName);
 					} else {
-						AnnotationVisitorUtil.emitMapping(
+						AnnotationVisitorCommonUtil.emitMapping(
 								data.remapper, AnnotationType.METHOD, data.mapping,
 								data.className, srcName, srcDesc, dstName);
 					}

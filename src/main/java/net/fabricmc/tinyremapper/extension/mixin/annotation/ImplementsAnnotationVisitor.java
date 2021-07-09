@@ -12,7 +12,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.Constant;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationElement;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
-import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.common.AnnotationVisitorCommonUtil;
 import net.fabricmc.tinyremapper.extension.mixin.data.IMappingHolder;
 import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.ImplementsAnnotationVisitor.Interface;
@@ -101,7 +101,7 @@ public class ImplementsAnnotationVisitor extends AnnotationVisitor {
 					String srcName = methodName.substring(prefix.length());
 					String srcDesc = methodDesc;
 
-					String dstName = AnnotationVisitorUtil.remapMember(
+					String dstName = AnnotationVisitorCommonUtil.remapMember(
 							remapper, AnnotationType.METHOD, Collections.singletonList(target),
 							srcName, srcDesc);
 
@@ -111,7 +111,7 @@ public class ImplementsAnnotationVisitor extends AnnotationVisitor {
 						srcName = methodName;
 						dstName = prefix + dstName;
 
-						AnnotationVisitorUtil.emitMapping(
+						AnnotationVisitorCommonUtil.emitMapping(
 								remapper, AnnotationType.METHOD, mapping,
 								owner, srcName, srcDesc, dstName);
 					}
@@ -125,7 +125,7 @@ public class ImplementsAnnotationVisitor extends AnnotationVisitor {
 					String srcName = methodName;
 					String srcDesc = methodDesc;
 
-					String dstName = AnnotationVisitorUtil.remapMember(
+					String dstName = AnnotationVisitorCommonUtil.remapMember(
 							remapper, AnnotationType.METHOD, Collections.singletonList(target),
 							srcName, srcDesc);
 
@@ -134,7 +134,7 @@ public class ImplementsAnnotationVisitor extends AnnotationVisitor {
 							Logger.warn("@Implements", Collections.singletonList(target), owner, methodName);
 						}
 					} else {
-						AnnotationVisitorUtil.emitMapping(
+						AnnotationVisitorCommonUtil.emitMapping(
 								remapper, AnnotationType.METHOD, mapping,
 								owner, srcName, srcDesc, dstName);
 					}

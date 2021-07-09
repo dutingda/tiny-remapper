@@ -11,7 +11,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationElement;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
-import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.common.AnnotationVisitorCommonUtil;
 import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 
 /**
@@ -44,7 +44,7 @@ public class InvokerAnnotationVisitor extends BoolRemapAnnotationVisitor {
 					String srcName = InvokerAnnotationVisitor.this.value;
 					String srcDesc = data.memberDescriptor;
 
-					String dstName = AnnotationVisitorUtil.remapMember(
+					String dstName = AnnotationVisitorCommonUtil.remapMember(
 							data.remapper, AnnotationType.METHOD,
 							InvokerAnnotationVisitor.this.targets, srcName, srcDesc);
 
@@ -72,10 +72,10 @@ public class InvokerAnnotationVisitor extends BoolRemapAnnotationVisitor {
 						throw new RuntimeException(data.memberName + " does not start with call or invoke.");
 					}
 
-					String srcName = AnnotationVisitorUtil.removeCamelPrefix(prefix, data.memberName);
+					String srcName = AnnotationVisitorCommonUtil.removeCamelPrefix(prefix, data.memberName);
 					String srcDesc = data.memberDescriptor;
 
-					String dstName = AnnotationVisitorUtil.remapMember(
+					String dstName = AnnotationVisitorCommonUtil.remapMember(
 							data.remapper, AnnotationType.METHOD,
 							InvokerAnnotationVisitor.this.targets, srcName, srcDesc);
 
@@ -83,9 +83,9 @@ public class InvokerAnnotationVisitor extends BoolRemapAnnotationVisitor {
 						Logger.warn("@Invoker", InvokerAnnotationVisitor.this.targets, data.className, data.memberName);
 					} else {
 						srcName = data.memberName;
-						dstName = AnnotationVisitorUtil.addCamelPrefix(prefix, dstName);
+						dstName = AnnotationVisitorCommonUtil.addCamelPrefix(prefix, dstName);
 
-						AnnotationVisitorUtil.emitMapping(
+						AnnotationVisitorCommonUtil.emitMapping(
 								data.remapper, AnnotationType.METHOD, data.mapping,
 								data.className, srcName, srcDesc, dstName);
 					}

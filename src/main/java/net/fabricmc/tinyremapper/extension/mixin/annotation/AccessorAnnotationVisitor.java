@@ -13,7 +13,7 @@ import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationElement;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationType;
 import net.fabricmc.tinyremapper.extension.mixin.annotation.common.BoolRemapAnnotationVisitor;
 import net.fabricmc.tinyremapper.extension.mixin.data.AnnotationVisitorCommonDataHolder;
-import net.fabricmc.tinyremapper.extension.mixin.util.AnnotationVisitorUtil;
+import net.fabricmc.tinyremapper.extension.mixin.annotation.common.AnnotationVisitorCommonUtil;
 import net.fabricmc.tinyremapper.extension.mixin.util.Logger;
 
 /**
@@ -61,7 +61,7 @@ public class AccessorAnnotationVisitor extends BoolRemapAnnotationVisitor {
 					String srcName = AccessorAnnotationVisitor.this.value;
 					String srcDesc = AccessorAnnotationVisitor.this.fieldDesc;
 
-					String dstName = AnnotationVisitorUtil.remapMember(
+					String dstName = AnnotationVisitorCommonUtil.remapMember(
 							data.remapper, AnnotationType.FIELD,
 							AccessorAnnotationVisitor.this.targets, srcName, srcDesc);
 
@@ -91,10 +91,10 @@ public class AccessorAnnotationVisitor extends BoolRemapAnnotationVisitor {
 						throw new RuntimeException(data.memberName + " does not start with get, set or is.");
 					}
 
-					String srcName = AnnotationVisitorUtil.removeCamelPrefix(prefix, data.memberName);
+					String srcName = AnnotationVisitorCommonUtil.removeCamelPrefix(prefix, data.memberName);
 					String srcDesc = AccessorAnnotationVisitor.this.fieldDesc;
 
-					String dstName = AnnotationVisitorUtil.remapMember(
+					String dstName = AnnotationVisitorCommonUtil.remapMember(
 							data.remapper, AnnotationType.FIELD,
 							AccessorAnnotationVisitor.this.targets, srcName, srcDesc);
 
@@ -103,9 +103,9 @@ public class AccessorAnnotationVisitor extends BoolRemapAnnotationVisitor {
 					} else {
 						srcName = data.memberName;
 						srcDesc = data.memberDescriptor;
-						dstName = AnnotationVisitorUtil.addCamelPrefix(prefix, dstName);
+						dstName = AnnotationVisitorCommonUtil.addCamelPrefix(prefix, dstName);
 
-						AnnotationVisitorUtil.emitMapping(
+						AnnotationVisitorCommonUtil.emitMapping(
 								data.remapper, AnnotationType.METHOD, data.mapping,
 								data.className, srcName, srcDesc, dstName);
 					}
