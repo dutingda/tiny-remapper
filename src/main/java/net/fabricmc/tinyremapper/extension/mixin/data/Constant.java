@@ -9,5 +9,5 @@ public final class Constant {
 	public static final int ASM_VERSION = Opcodes.ASM9;
 
 	public static final List<String> UNMAP_NAMES = Arrays.asList(
-			"<init>", "<clinit>", "", "main");
+			"<init>", "<clinit>", "");
 }
